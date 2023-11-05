@@ -1,14 +1,11 @@
-function sumArray(newarray) {
-    let totalSum = 0;
-    // for (let i = 0; i < newarray.length; i++) {
-    //     totalSum += newarray[i];
-    // }
+function returnDay(day) {
+    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-    for (let element of newarray) {
-        totalSum += element;
+    for (let i = 0; i <= days.length; i++) {
+        if (day < 1 || day > 7 ) {
+            return null;
+        } else {
+            return days[day-1];
+        }
     }
-
-    return totalSum;
 }
-
-sumArray([1,2,3]) 
