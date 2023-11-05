@@ -1,11 +1,17 @@
-function returnDay(day) {
-    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+function squareSum(numbers){
+    let sumSqrNum = 0;
 
-    for (let i = 0; i <= days.length; i++) {
-        if (day < 1 || day > 7 ) {
-            return null;
-        } else {
-            return days[day-1];
-        }
+    /*
+    for (let i = 0; i < numbers.length; i++) {
+        sumSqrNum += numbers[i];
     }
+    return sumSqrNum;
+    */
+
+
+    for (let element of numbers) {
+      let powElement = Math.pow(element, 2);;
+      sumSqrNum += powElement
+    }
+    return sumSqrNum;
 }
